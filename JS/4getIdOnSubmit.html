@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){ //content load 1st
+                document.querySelector('form').onsubmit = function() { //function run onsubmit
+                    const name = document.querySelector('#name').value; //read name after submit via id
+                    alert(`Hello, ${name} ! \nThanks for submitted.`);
+                }
+            });
+        </script>
+        <style>
+            body{
+                margin: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Please Enter Your Name</p>
+        <form> <!--id is for selector-->
+            <input autofocus id="name" placeholder="Your name" type="text">
+            <input type="submit">
+        </form><!--autofocus will direct enable typing into the form-->
+    </body>
+</html>
